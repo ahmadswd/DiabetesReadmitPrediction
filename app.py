@@ -211,8 +211,8 @@ def hello():
       mess[mes]=adss[ads]=payer[pay]=mett[met]=repp[rep]=natt[nat]=chll[chl]=glimm[glim]=glipp[glip]=glypp[glyb]=pioo[pio]=ross[ros]=acaa[aca]=mmgg[mmg]=troo[tro]=inss[ins]=glyy[gly]=1
       
 
-      scalerfile = 'knn.sav'
-      knn_model = pickle.load(open(scalerfile, 'rb'))
+      # scalerfile = 'knn.sav'
+      # knn_model = pickle.load(open(scalerfile, 'rb'))
       race[rac] = 1
       # res = knn_model.predict([int(hours),int(prolab
       # ,int(prod),int(medic),int(outpat),int(emerg),
@@ -237,7 +237,7 @@ def hello():
       # abc=abc[:len(abc)-1]
       arr = np.array(abc)
       arr = arr.reshape(1, -1)
-      result = knn_model.predict(arr)
+      result = [1]#knn_model.predict(arr)
       print("This is the result = ",result)
       return jsonify(str(result[0]))
     else:
