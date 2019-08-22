@@ -14,14 +14,14 @@ import pickle
 
 DEBUG = True
 
-app = Flask(__name__)
-app.config.from_object(__name__)
+application = Flask(__name__)
+application.config.from_object(__name__)
 
 incoming_data = []
 
-CORS(app, resources={r'/*': {'origins': '*'}})
-
-@app.route('/',methods=['GET', 'POST'])
+CORS(application, resources={r'/*': {'origins': '*'}})
+@application.route('/index',methods=['GET', 'POST'])
+@application.route('/',methods=['GET', 'POST'])
 def hello():
     if request.method == 'POST':
       post_data = request.get_json()
@@ -65,9 +65,9 @@ def hello():
       gli = post_data.get('gli')
       glp = post_data.get('glp')
       mer = post_data.get('mer')
-         #incoming_data.append(hours)
-         # incoming_data.append(prolab)
-         # incoming_data.append(prod)
+         #incoming_data.applicationend(hours)
+         # incoming_data.applicationend(prolab)
+         # incoming_data.applicationend(prod)
          # ti=post_data.get('title')
          # print(type(hours))
          # print(prolab) 
@@ -251,15 +251,13 @@ def hello():
 	# else:
 	# 		return jsonify('No POST')
 
-@app.route('/ping', methods=['GET'])
-def ping_pong():
-   return jsonify('PONG!')
 
 
-@app.route('/Result')#,methods=['POST'])
+
+@application.route('/Result')#,methods=['POST'])
 def get_data():
    return jsonify('Got Results')
 
 
 if __name__ == '__main__':
-    app.run()
+    application.run()
