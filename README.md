@@ -14,6 +14,13 @@ Model to predict readmission of the diabetes patients within 30 days
 
 - Used Herkou to host the back-end and Netlify to host the front-end
 
+## How to Use
+
+- Apply the information about your patient that admitted to the hospital.
+
+- Apply all the information and submit to check if this patient is going to readmit or not
+
+- No data is stored back to the server, all information provided are gone after submitting the data.
 
 Data provided by:
 https://archive.ics.uci.edu/ml/datasets/diabetes+130-us+hospitals+for+years+1999-2008
