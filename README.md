@@ -1,4 +1,4 @@
-# DiabetesReadmitPrediction
+# Diabetes Readmit Prediction Model
 Model to predict readmission of the diabetes patients within 30 days
 
 ## [Live Demo](https://sweedcodrp.netlify.com/)
