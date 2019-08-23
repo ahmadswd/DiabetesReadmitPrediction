@@ -643,7 +643,7 @@ displayNotificationNo(){
   this.$snotify.success('Patient 68% to not readmit  within the next 30 days ')
 },
 getMessage() {
-const path = 'http://localhost:5000/';
+const path = 'https://sweedcodrp.herokuapp.com';
 axios.get(path)
 .then((res) => {
 this.msg = res.data;
@@ -656,7 +656,7 @@ console.error(error);
 },
  onSubmit(evt) {
       evt.preventDefault();
-      const path = 'http://localhost:5000/';
+      const path = 'https://sweedcodrp.herokuapp.com';
       const payload = {
     title: this.InfoGetting.title,
     hrs: this.InfoGetting.hrs,
