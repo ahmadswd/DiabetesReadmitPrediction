@@ -637,10 +637,10 @@ methods: {
 displayNotification() {
   // var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
 
-this.$snotify.error('Patient 68% possible to readmittion within the next 30 days')//'Patient will readmit within the next 30 days between ' + str(utc) + ' and ' + str(utc+30));
+this.$snotify.error('There is a possibility for the patient to readmit within the next 30 days')//'Patient will readmit within the next 30 days between ' + str(utc) + ' and ' + str(utc+30));
 },
 displayNotificationNo(){
-  this.$snotify.success('Patient 68% to not readmit  within the next 30 days ')
+  this.$snotify.success('There isn\'t a possibility for the patient to readmit  within the next 30 days ')
 },
 getMessage() {
 const path = 'https://sweedcodrp.herokuapp.com';
@@ -708,7 +708,6 @@ console.error(error);
           // this.displayNotification();
           // this.showMessage = true;
           console.log('GOT THE MESSAGE')
-          alert(response.data)
           if(response.data == "1"){
           this.msg = "This Patient Will readmit"
           this.displayNotification();
@@ -721,7 +720,6 @@ console.error(error);
         .catch((error) => {
           // eslint-disable-next-line
           console.log('Got it');
-          alert(response)
         });
       // this.$refs.addBookModal.hide();
       // let read = false;
